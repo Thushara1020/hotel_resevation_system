@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right, #eef2f3, #8e9eab);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CostomerFomeFXML">
+
+    <!-- Title -->
+    <Label layoutX="300" layoutY="25" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Customer Registration Form" />
+
+    <!-- Customer ID -->
+    <Label layoutX="80" layoutY="100" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" text="Customer ID:" />
+    <TextField fx:id="txtCustomerId" layoutX="200" layoutY="95" prefWidth="250" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+
+    <!-- Customer Name -->
+    <Label layoutX="80" layoutY="150" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" text="Customer Name:" />
+    <TextField fx:id="txtCustomerName" layoutX="200" layoutY="145" prefWidth="250" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+
+    <!-- Customer Address -->
+    <Label layoutX="80" layoutY="200" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" text="Address:" />
+    <TextField fx:id="txtAddress" layoutX="200" layoutY="195" prefWidth="250" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+
+    <!-- Contact Number -->
+    <Label layoutX="80" layoutY="250" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" text="Contact No:" />
+    <TextField fx:id="txtContact" layoutX="200" layoutY="245" prefWidth="250" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
+
+    <!-- Buttons -->
+    <Button fx:id="btnAdd" layoutX="28.0" layoutY="308.0" onAction="#btnAddOnAction" prefWidth="100" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8;" text="Add" />
+    <Button fx:id="btnUpdate" layoutX="148.0" layoutY="308.0" onAction="#btnUpdateOnAction" prefWidth="100" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-background-radius: 8;" text="Update" />
+    <Button fx:id="btnDelete" layoutX="268.0" layoutY="308.0" onAction="#btnDeleteOnAction" prefWidth="100" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-background-radius: 8;" text="Delete" />
+    <Button fx:id="btnClear" layoutX="388.0" layoutY="308.0" onAction="#btnClearOnAction" prefWidth="100" style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 8;" text="Clear" />
+
+    <!-- Table View -->
+    <TableView fx:id="tblCustomer" layoutX="489.0" layoutY="63.0" prefHeight="470.0" prefWidth="410.0" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="70" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="120" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="120" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="100" text="Contact" />
+        </columns>
+    </TableView>
+
+</AnchorPane>
